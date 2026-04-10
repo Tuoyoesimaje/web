@@ -205,7 +205,7 @@
     .trust-badge .icon {
       width: 32px; height: 32px; border-radius: 50%;
       background: var(--sun-light); display: flex; align-items: center; justify-content: center;
-      font-size: 1rem;
+      font-size: 1rem; color: var(--teal);
     }
 
     /* Hero right — floating price card + image */
@@ -305,9 +305,9 @@
     .price-card-icon {
       width: 40px; height: 40px; border-radius: 12px;
       background: var(--teal-light); display: flex; align-items: center; justify-content: center;
-      font-size: 1.1rem; flex-shrink: 0;
+      font-size: 1.1rem; flex-shrink: 0; color: var(--teal);
     }
-    .price-card.featured .price-card-icon { background: var(--sun-light); }
+    .price-card.featured .price-card-icon { background: var(--sun-light); color: var(--sun-dark); }
     .price-card-title { font-weight: 700; font-size: 1rem; color: var(--ink); }
     .price-card-sub { font-size: 0.75rem; color: var(--ink3); margin-top: 1px; }
     .price-card-body { padding: 0 1.5rem 1.5rem; }
@@ -350,7 +350,7 @@
       font-weight: 700; color: rgba(245,166,35,.18);
       line-height: 1; margin-bottom: 1.25rem;
     }
-    .step-icon { font-size: 2rem; margin-bottom: 1rem; }
+    .step-icon { font-size: 2rem; margin-bottom: 1rem; color: var(--sun); }
     .step-card h3 { font-size: 1.15rem; font-weight: 700; margin-bottom: 0.6rem; color: var(--white); }
     .step-card p { font-size: 0.9rem; color: rgba(255,255,255,.45); line-height: 1.65; }
     .step-connector {
@@ -374,7 +374,7 @@
     .service-emoji {
       width: 52px; height: 52px; background: var(--sun-light);
       border-radius: 16px; display: flex; align-items: center; justify-content: center;
-      font-size: 1.5rem; flex-shrink: 0;
+      font-size: 1.5rem; flex-shrink: 0; color: var(--teal);
     }
     .service-card h3 { font-size: 1rem; font-weight: 700; margin-bottom: 0.4rem; }
     .service-card p { font-size: 0.88rem; color: var(--ink2); line-height: 1.6; }
@@ -588,7 +588,7 @@
       <a href="#contact">Contact</a>
     </div>
     <button class="nav-btn" onclick="openModal()">
-      📲 Book Pickup
+      <i data-lucide="smartphone" style="width:18px;height:18px;"></i> Book Pickup
     </button>
     <button class="menu-toggle" id="menuToggle">
       <span></span><span></span><span></span>
@@ -601,7 +601,7 @@
   <a href="#pricing" onclick="closeMenu()">Pricing</a>
   <a href="#services" onclick="closeMenu()">Services</a>
   <a href="#contact" onclick="closeMenu()">Contact</a>
-  <button class="mob-btn" onclick="openModal(); closeMenu()">📲 Book a Pickup on WhatsApp</button>
+  <button class="mob-btn" onclick="openModal(); closeMenu()"><i data-lucide="smartphone" style="width:18px;height:18px;margin-right:6px;"></i> Book a Pickup on WhatsApp</button>
 </div>
 
 <!-- HERO -->
@@ -619,14 +619,14 @@
       </p>
       <div class="hero-actions">
         <button class="btn-primary" onclick="openModal()">
-          📲 Book a Pickup
+          <i data-lucide="smartphone" style="width:18px;height:18px;"></i> Book a Pickup
         </button>
         <a href="#pricing" class="btn-outline">See All Prices</a>
       </div>
       <div class="hero-trust">
-        <div class="trust-badge"><div class="icon">⚡</div>Express available</div>
-        <div class="trust-badge"><div class="icon">🚗</div>Pickup & Delivery</div>
-        <div class="trust-badge"><div class="icon">✅</div>Fixed Pricing</div>
+        <div class="trust-badge"><div class="icon"><i data-lucide="zap" style="width:16px;height:16px;"></i></div>Express available</div>
+        <div class="trust-badge"><div class="icon"><i data-lucide="truck" style="width:16px;height:16px;"></i></div>Pickup & Delivery</div>
+        <div class="trust-badge"><div class="icon"><i data-lucide="check-circle" style="width:16px;height:16px;"></i></div>Fixed Pricing</div>
       </div>
     </div>
     <div class="hero-visual reveal">
@@ -688,7 +688,7 @@
       <div class="price-panel active" id="panel-wash">
         <div class="price-card reveal">
           <div class="price-card-head">
-            <div class="price-card-icon">👕</div>
+            <div class="price-card-icon"><i data-lucide="shirt" style="width:20px;height:20px;"></i></div>
             <div><div class="price-card-title">Tops & Shirts</div><div class="price-card-sub">Everyday clothing</div></div>
           </div>
           <div class="price-card-body">
@@ -700,7 +700,7 @@
         </div>
         <div class="price-card reveal">
           <div class="price-card-head">
-            <div class="price-card-icon">👖</div>
+            <div class="price-card-icon"><i data-lucide="shopping-bag" style="width:20px;height:20px;"></i></div>
             <div><div class="price-card-title">Bottoms & Outfits</div><div class="price-card-sub">Trousers, natives & more</div></div>
           </div>
           <div class="price-card-body">
@@ -712,7 +712,7 @@
         </div>
         <div class="price-card reveal">
           <div class="price-card-head">
-            <div class="price-card-icon">🛏️</div>
+            <div class="price-card-icon"><i data-lucide="home" style="width:20px;height:20px;"></i></div>
             <div><div class="price-card-title">Household Items</div><div class="price-card-sub">Bedsheets, towels & more</div></div>
           </div>
           <div class="price-card-body">
@@ -729,7 +729,7 @@
       <div class="price-panel" id="panel-dry">
         <div class="price-card featured reveal">
           <div class="price-card-head">
-            <div class="price-card-icon">🥼</div>
+            <div class="price-card-icon"><i data-lucide="briefcase" style="width:20px;height:20px;"></i></div>
             <div><div class="price-card-title">Suits & Formal</div><div class="price-card-sub">Professional dry cleaning</div></div>
           </div>
           <div class="price-card-body">
@@ -742,7 +742,7 @@
         </div>
         <div class="price-card reveal">
           <div class="price-card-head">
-            <div class="price-card-icon">⚡</div>
+            <div class="price-card-icon"><i data-lucide="zap" style="width:20px;height:20px;"></i></div>
             <div><div class="price-card-title">Express Service</div><div class="price-card-sub">Priority processing</div></div>
           </div>
           <div class="price-card-body">
@@ -753,7 +753,7 @@
         </div>
         <div class="price-card reveal">
           <div class="price-card-head">
-            <div class="price-card-icon">🎀</div>
+            <div class="price-card-icon"><i data-lucide="sparkles" style="width:20px;height:20px;"></i></div>
             <div><div class="price-card-title">Delicate Items</div><div class="price-card-sub">Extra care, gentle handling</div></div>
           </div>
           <div class="price-card-body">
@@ -769,7 +769,7 @@
       <div class="price-panel" id="panel-special">
         <div class="price-card reveal">
           <div class="price-card-head">
-            <div class="price-card-icon">👰</div>
+            <div class="price-card-icon"><i data-lucide="crown" style="width:20px;height:20px;"></i></div>
             <div><div class="price-card-title">Premium & Bridal</div><div class="price-card-sub">Special occasion items</div></div>
           </div>
           <div class="price-card-body">
@@ -781,7 +781,7 @@
         </div>
         <div class="price-card reveal">
           <div class="price-card-head">
-            <div class="price-card-icon">🛋️</div>
+            <div class="price-card-icon"><i data-lucide="bed" style="width:20px;height:20px;"></i></div>
             <div><div class="price-card-title">Home & Bedding</div><div class="price-card-sub">Big items handled with care</div></div>
           </div>
           <div class="price-card-body">
@@ -793,7 +793,7 @@
         </div>
         <div class="price-card reveal">
           <div class="price-card-head">
-            <div class="price-card-icon">🏢</div>
+            <div class="price-card-icon"><i data-lucide="building-2" style="width:20px;height:20px;"></i></div>
             <div><div class="price-card-title">Bulk & Corporate</div><div class="price-card-sub">Hotels, offices, hospitals</div></div>
           </div>
           <div class="price-card-body">
@@ -808,7 +808,7 @@
 
     <div class="price-cta reveal">
       <button class="btn-primary" style="font-size:1rem;padding:1rem 2.5rem;" onclick="openModal()">
-        📲 Book Now — Prices Calculated Instantly
+        <i data-lucide="smartphone" style="width:18px;height:18px;"></i> Book Now — Prices Calculated Instantly
       </button>
     </div>
   </div>
@@ -823,21 +823,21 @@
     <div class="steps-grid">
       <div class="step-card reveal">
         <div class="step-num">01</div>
-        <div class="step-icon">📲</div>
+        <div class="step-icon"><i data-lucide="smartphone" style="width:32px;height:32px;"></i></div>
         <h3>Book on WhatsApp</h3>
         <p>Pick your items on our website, fill in your details, and your booking message goes straight to our WhatsApp. Fast and easy.</p>
         <div class="step-connector">→</div>
       </div>
       <div class="step-card reveal">
         <div class="step-num">02</div>
-        <div class="step-icon">🚗</div>
+        <div class="step-icon"><i data-lucide="truck" style="width:32px;height:32px;"></i></div>
         <h3>We collect from you</h3>
         <p>We come to your address at the agreed time. No need to leave home. Drop off at our location if you prefer — your choice.</p>
         <div class="step-connector">→</div>
       </div>
       <div class="step-card reveal">
         <div class="step-num">03</div>
-        <div class="step-icon">✨</div>
+        <div class="step-icon"><i data-lucide="sparkles" style="width:32px;height:32px;"></i></div>
         <h3>Fresh clothes returned</h3>
         <p>Washed, ironed and neatly packed. Delivered back to you within 48 hours — or sooner with our Express service.</p>
       </div>
@@ -852,28 +852,28 @@
     <h2 class="section-title reveal">Everything your clothes need,<br>under one roof.</h2>
     <div class="services-grid">
       <div class="service-card reveal">
-        <div class="service-emoji">👕</div>
+        <div class="service-emoji"><i data-lucide="shirt" style="width:24px;height:24px;"></i></div>
         <div>
           <h3>Wash & Iron</h3>
           <p>Our most popular service. Shirts, trousers, natives, bedsheets — washed clean and pressed flat. Ready in 48 hours.</p>
         </div>
       </div>
       <div class="service-card reveal">
-        <div class="service-emoji">✨</div>
+        <div class="service-emoji"><i data-lucide="sparkles" style="width:24px;height:24px;"></i></div>
         <div>
           <h3>Dry Cleaning</h3>
           <p>Suits, blazers, evening gowns and delicate fabrics treated with professional care and solvent cleaning.</p>
         </div>
       </div>
       <div class="service-card reveal">
-        <div class="service-emoji">⚡</div>
+        <div class="service-emoji"><i data-lucide="zap" style="width:24px;height:24px;"></i></div>
         <div>
           <h3>Express Service</h3>
           <p>Need your clothes urgently? Our 24–48 hour express option gets things done fast, with a small priority surcharge.</p>
         </div>
       </div>
       <div class="service-card reveal">
-        <div class="service-emoji">🏢</div>
+        <div class="service-emoji"><i data-lucide="building-2" style="width:24px;height:24px;"></i></div>
         <div>
           <h3>Bulk & Corporate</h3>
           <p>Hotels, hospitals, schools and businesses — we offer dedicated handling and discounted pricing for regular large orders.</p>
@@ -921,7 +921,7 @@
 <section class="cta-band" id="contact">
   <h2>Your clothes deserve proper care.</h2>
   <p>Book a pickup in under a minute. Your message goes straight to WhatsApp.</p>
-  <button class="btn-primary" onclick="openModal()">📲 Book a Pickup Now</button>
+  <button class="btn-primary" onclick="openModal()"><i data-lucide="smartphone" style="width:18px;height:18px;"></i> Book a Pickup Now</button>
 </section>
 
 <!-- FOOTER -->
@@ -936,10 +936,10 @@
     </div>
     <div class="footer-col">
       <h4>Contact</h4>
-      <p>📞 +234 813 618 4045</p>
-      <p>💬 WhatsApp us</p>
-      <p>📍 Plot 3 Elf Road, Ogunu. Delta State</p>
-      <p>⏰ Mon–Sat · 8AM–7PM</p>
+      <p><i data-lucide="phone" style="width:14px;height:14px;display:inline-block;vertical-align:middle;margin-right:6px;"></i> +234 813 618 4045</p>
+      <p><i data-lucide="message-circle" style="width:14px;height:14px;display:inline-block;vertical-align:middle;margin-right:6px;"></i> WhatsApp us</p>
+      <p><i data-lucide="map-pin" style="width:14px;height:14px;display:inline-block;vertical-align:middle;margin-right:6px;"></i> Plot 3 Elf Road, Ogunu. Delta State</p>
+      <p><i data-lucide="clock" style="width:14px;height:14px;display:inline-block;vertical-align:middle;margin-right:6px;"></i> Mon–Sat · 8AM–7PM</p>
     </div>
     <div class="footer-col">
       <h4>Navigate</h4>
@@ -975,7 +975,7 @@
         <span class="total-label">Estimated Total</span>
         <span class="total-val" id="totalVal">₦0</span>
       </div>
-      <button class="btn-primary full" onclick="toStep2()">Continue →</button>
+      <button class="btn-primary full" onclick="toStep2()">Continue <i data-lucide="arrow-right" style="width:16px;height:16px;"></i></button>
     </div>
 
     <!-- Step 2 -->
@@ -990,15 +990,15 @@
       </div>
       <div id="formErr" class="form-err" style="display:none;"></div>
       <div class="form-btns">
-        <button class="back-btn" onclick="toStep1()">← Back</button>
-        <button class="btn-primary" onclick="submitBooking()">Send to WhatsApp 📲</button>
+        <button class="back-btn" onclick="toStep1()"><i data-lucide="arrow-left" style="width:16px;height:16px;"></i> Back</button>
+        <button class="btn-primary" onclick="submitBooking()">Send to WhatsApp <i data-lucide="send" style="width:16px;height:16px;"></i></button>
       </div>
     </div>
 
     <!-- Step 3 -->
     <div id="s3" class="modal-body" style="display:none;">
       <div class="success-body">
-        <div class="success-ring">📲</div>
+        <div class="success-ring"><i data-lucide="check-circle" style="width:36px;height:36px;"></i></div>
         <h3 class="success-h">WhatsApp is opening!</h3>
         <p class="success-p" id="successMsg"></p>
         <button class="btn-primary full" onclick="closeModal()">Done</button>
@@ -1197,6 +1197,9 @@ Please confirm my booking. Thank you! 🙏`;
     document.getElementById('successMsg').textContent =
       `WhatsApp has opened with your booking details, ${name}. Just tap Send to confirm your pickup for ${fDate}. They'll reply to confirm. ✅`;
   }
+
+  // Initialize Lucide icons
+  lucide.createIcons();
 </script>
 </body>
 </html>
