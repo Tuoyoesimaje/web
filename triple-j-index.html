@@ -478,6 +478,8 @@
     .modal-x:hover { background: var(--ink); color: var(--white); }
 
     .modal-body { flex: 1; overflow-y: auto; padding: 1.5rem 1.75rem; }
+    .modal-body::-webkit-scrollbar { display: none; }
+    .modal-body { -ms-overflow-style: none; scrollbar-width: none; }
     .modal-hint { font-size: 0.83rem; color: var(--ink3); margin-bottom: 1.25rem; }
 
     .item-list { display: flex; flex-direction: column; gap: 8px; margin-bottom: 1.25rem; }
@@ -1127,8 +1129,8 @@
     ['fName','fPhone','fAddr','fNotes'].forEach(id => document.getElementById(id).value = '');
     document.getElementById('fDate').value = '';
     document.getElementById('formErr').style.display = 'none';
-    const tom = new Date(); tom.setDate(tom.getDate() + 1);
-    document.getElementById('fDate').min = tom.toISOString().split('T')[0];
+    const today = new Date();
+    document.getElementById('fDate').min = today.toISOString().split('T')[0];
     document.getElementById('bookingModal').style.display = 'flex';
     document.body.style.overflow = 'hidden';
   }
